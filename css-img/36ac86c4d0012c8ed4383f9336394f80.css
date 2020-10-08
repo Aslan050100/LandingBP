@@ -1,0 +1,146 @@
+.buttoncontfour{
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.buttonleftfour,.buttonrightfour{
+	float: left;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.buttonleftfour{
+	 font-family: Roboto;
+  font-size: 34px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.1px;
+  text-align: left;
+  color: #000000;
+}
+
+.buttonhreffour{
+	  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: table-cell;
+  opacity: .7;
+  transition: .2s;
+	border-style: solid;
+}
+
+.buttonhreffour:hover,.buttonhreffour:focus{
+	opacity: 1;
+	text-decoration: none;
+}
+
+.buttonhreffour:active{
+	opacity: .7;
+	transform: scale(.97);
+	text-decoration: none;
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1400px) {
+	.buttoncontfour{
+		padding-top: 55px;
+		padding-bottom: 55px;
+	}
+	.buttonrightfour{
+		justify-content: flex-end;
+	}
+	.buttonleftfour{
+		padding-right: 10%;
+	}
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) and (max-width: 1399px) {
+	.buttoncontfour{
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.buttonrightfour{
+		justify-content: flex-end;
+	}
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.buttoncontfour{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.buttonrightfour{
+		justify-content: flex-end;
+	}
+	.buttonleftfour{
+		padding-right: 40px;
+	}
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+	.buttoncontfour{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.buttonrightfour{
+		justify-content: flex-end;
+	}
+	.buttonleftfour{
+		padding-right: 40px;
+	}
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+	.buttoncontfour{
+		padding-top: 30px;
+		padding-bottom: 30px;
+		flex-direction: column;
+	}
+	.buttonrightfour{
+		padding-top: 20px;
+		width: 100%;
+	}
+	.buttonhreffour{
+  padding-left: 44px;
+  padding-right: 44px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+	.buttoncontfour{
+		padding-top: 30px;
+		padding-bottom: 30px;
+		flex-direction: column;
+	}
+	.buttonrightfour{
+		padding-top: 20px;
+		width: 100%;
+	}
+	.buttonhreffour{
+  padding-left: 44px;
+  padding-right: 44px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+}

@@ -1,0 +1,30 @@
+.dividercontten {
+	position: relative;
+	overflow: hidden;
+} 
+
+.dividercontten-bg {
+	display: flex;
+	width: 100vw;
+	height: 100px;
+	background-color: #ffbb33;
+}
+
+.dividercontten-bg-inner {
+	margin-top: auto;
+	width: 100vw;
+	height: 50px;
+	background-color: #fff;
+	border-top-right-radius: 50%;
+	border-top-left-radius: 50%;
+}
+
+
+@media (min-width: 992px) {
+	.dividercontten-bg {
+		height: 140px;
+	}
+	.dividercontten-bg-inner  {
+		height: 70px;
+	}
+}

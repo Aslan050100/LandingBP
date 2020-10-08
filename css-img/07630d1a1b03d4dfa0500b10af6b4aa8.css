@@ -1,0 +1,127 @@
+@media only screen and (max-width: 1199px) {
+    .picturesorderthree .picturesrightthree .picturescontentthree{
+        height: auto !important;
+    }
+    .picturesimgthree{
+    	display: none !important; 
+    }
+}
+
+.picturesorderthree .picturesleftthree,.picturesorderthree .picturesrightthree {
+    overflow: hidden;
+    float: left;
+    font-family: Roboto;
+}
+
+.picturesblocktitle {
+    font-size: 36px;
+    font-weight: 200;
+    color: #000;
+    font-family: Roboto;
+    line-height: 1;
+}
+
+.picturesblocktitle  {
+    font-weight: 200;
+}
+
+
+.picturesorderthree {
+    overflow: hidden;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.picturesorderthree  {
+    text-align: left;
+    margin-bottom: 25px
+}
+
+.picturesorderthree  span {
+    display: block
+}
+
+.picturesorderthree  span:first-child {
+	font-weight: 600;
+}
+
+.picturesorderthree .picturesleftthree {
+    background-color: #231f20
+}
+
+.picturesorderthree .picturesleftthree .picturescontentthree {
+    padding: 40px 40px 25px;
+    color: #fff
+}
+
+.picturesorder_1three{
+     padding: 0px 20px 5px;    
+}
+
+.picturesorderthree .picturesleftthree .picturescontentthree .table {
+    display: table;
+    margin: 0
+}
+
+.picturesorderthree .picturesleftthree .picturescontentthree .table:first-child {
+    margin-bottom: 30px
+}
+
+.picturesorderthree .picturesleftthree .picturescontentthree .text {
+    display: table-cell;
+    vertical-align: middle;
+    height: 200px
+}
+
+.picturesorderthree .picturesleftthree .picturescontentthree .comment {
+    display: table-cell;
+    vertical-align: middle;
+    height: 95px
+}
+
+.picturesorderthree .picturesleftthree .picturesimgthree,.picturesorderthree .picturesrightthree .picturesimgthree {
+    display: inline-block;
+    -webkit-transition: ease-out .5s;
+}
+
+.picturesorderthree .picturesleftthree .picturesimgthree {
+    width: 615px;
+    height: 551px;
+    transition: ease-out .5s;
+    margin-bottom: -10px;
+}
+
+.picturesimgthree{
+	    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.picturesorderthree .picturesrightthree {
+    background-color: #231f20;
+    margin-top: -70px
+}
+
+.picturesorderthree .picturesrightthree .picturesimgthree {
+    width: 585px;
+    height: 506px;
+    transition: ease-out .5s
+}
+
+@media only screen and (max-width: 1095px) {
+    .picturesorderthree .picturesleftthree .picturesimgthree {
+        margin-left:-55px
+    }
+
+    .picturesorderthree .picturesrightthree .picturesimgthree {
+        margin-left: -45px
+    }
+}
+
+.picturesorderthree .picturesrightthree .picturescontentthree {
+    padding: 40px 25px;
+    height: 495px;
+    color: #fff;
+}
+

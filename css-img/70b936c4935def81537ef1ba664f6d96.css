@@ -1,0 +1,111 @@
+.titlecontone{
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.titletopone{
+	 font-family: Roboto;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+}
+
+.titlecenterone{
+	font-family: Roboto;
+  font-size: 36px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+}
+
+.titlelineone{
+	width: 76px;
+	height: 3px;
+	background-color: #000;
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1400px) {
+	.titlecontone{
+		padding-top: 55px;
+		padding-bottom: 55px;
+	}
+	.titlecenterone{
+		padding-bottom: 42px;
+		padding-top: 14px;
+	}
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) and (max-width: 1399px) {
+	.titlecontone{
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.titlecenterone{
+		padding-bottom: 40px;
+		padding-top: 12px;
+	}
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.titlecontone{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.titlecenterone{
+		padding-bottom: 35px;
+		padding-top: 10px;
+	}
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+	.titlecontone{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.titlecenterone{
+		padding-bottom: 26px;
+		padding-top: 8px;
+	}
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+	.titlecontone{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.titlecenterone{
+		padding-bottom: 20px;
+		padding-top: 8px;
+	}
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+	.titlecontone{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.titlecenterone{
+		padding-bottom: 20px;
+		padding-top: 8px;
+	}
+}	
+

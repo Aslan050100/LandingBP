@@ -1,0 +1,87 @@
+document.addEventListener('DOMContentLoaded', function()
+{
+    $(document).ready(function(){
+        $('body').attr('style','');
+function banner_position(){
+
+var firstpos = $(document).scrollTop(); // первоначальная позиция
+var height = $('.banner_bg').height(); // высота баннера
+$(window).on("scroll", function() {
+  var scroll = $(document).scrollTop(); // текущее положение
+    $('.banner_bg').css('height',height)
+      if(firstpos == 0){ // при загрузке
+        $('.banner_bg').css('transition','.2s');
+          if(scroll > 0){
+            $('.banner_bg').css('margin-top','-'+height+'px');
+          } else 
+          if (scroll == 0){
+            $('.banner_bg').css('margin-top','-'+0+'px');
+            $('.banner_bg').css('height',height);
+          }
+      }
+      else { // при обновлении страницы не в начале
+        $('.banner_bg').css('margin-top','-'+height+'px');
+          var rscroll = $(document).scrollTop();
+          $('.banner_bg').css('transition','.2s');
+            if(rscroll > 0){
+              $('.banner_bg').css('margin-top','-'+height+'px');
+            } else 
+            if (rscroll == 0){
+              $('.banner_bg').css('margin-top','-'+0+'px');
+              $('.banner_bg').css('height',height);
+            }
+      }
+});
+
+  $('.banner_href').click(function(){
+    $('.banner_href').addClass('active_btn');
+    $('.popup_wrapper').css('height','300px');
+  $('.popup_close').css('margin-top','-0px');
+  $('#domain').focus();
+});
+    $('.popup_close').click(function(){
+    $('.banner_href').removeClass('active_btn');
+    $('.popup_wrapper').css('height','0px');
+    $('.popup_close').css('margin-top','-290px');
+});
+
+$('input').on('input keyup', function(e) {
+  $('#install_checkfree').attr('target','_blank')
+  var link = $('#domain').val();
+  $('#install_checkfree').click(function(){
+
+    if(window['yaCounter49187800'])
+    {
+        yaCounter49187800.reachGoal('site_install_package');
+    }
+
+    var patt = new RegExp("https://");
+    var res = patt.test(link);
+    if(res == false){
+    $("#install_checkfree").attr("href", "https://" + link + "/marketplace/detail/krayt.one/");
+    } else $("#install_checkfree").attr("href", link+"/marketplace/detail/krayt.one/");
+});
+});
+}
+
+
+
+function banner(){
+
+var str_banner = $('<section><div class="banner_bg"><img src="https://bitrix24.market/upload/uf/0c3/0c3eb635200d7337614cd97457e22f5f.png" class="bannerimg"><div class="banner_animate"></div><div class="banner_cont mx-auto col-xl-11"><div class="banner_left col-xl-9 col-md-8"><div class="banner_left_top"><div class="banner_left_top_one"></div><div class="banner_text_block_flex"><span class="banner_left_top_two"> ШАБЛОНОВ САЙТОВ </span><span class="banner_left_top_two banner_app">«KRAYT.ONE» </span><span class="banner_left_bottomtext"> для Битрикс24.Сайты </span></div></div></div><div class="banner_right col-xl-3 col-md-4"><a href="#" onclick="yaCounter49187800.reachGoal(\'site_INSTALL\'); return true;" class="banner_href" id="checkfree">Попробовать бесплатно</a></div></div></div><div class="popup_wrapper"><div class="popup_close"><div class="popup_closeline"></div><div class="popup_closeline"></div></div><div class="popup_left col-6"><div class="popup_title">У меня <span class="popup_title_bold">есть</span> Битрикс24</div><div class="popup_textcont"><div class="popup_text">Укажите адрес вашего портала:</div><input class="popup_form" id="domain" placeholder="https://portal.bitrix24.ru"></div><a href="#" class="popup_btn" id="install_checkfree">Попробовать бесплатно</a></div><div class="popup_right col-6"><div class="popup_title">У меня <span class="popup_title_bold">нет</span> Битрикс24</div><div class="popup_textcont"><div class="popup_text">В случае, если у вас еще нет Б24, просто установите, нажав на кнопку ниже:</div></div><a onclick="yaCounter49187800.reachGoal(\'site_install_portal\'); return true;" target="_blank" href="http://www.bitrix24.ru/register/reg.php?addmodule=krayt.one" class="popup_btn" id="install">Установить</a></div></div></section>');
+$("body").prepend(str_banner); 
+
+var showbanner = 'show';
+if(location.hash == '#show' || location.search.indexOf("show") > 0){
+    $('.banner_bg').css('display','block');
+    banner_position();
+}
+else {}
+
+} banner();
+
+
+
+
+});
+});

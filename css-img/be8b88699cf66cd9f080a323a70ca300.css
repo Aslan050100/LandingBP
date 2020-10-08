@@ -1,0 +1,28 @@
+.dividercontnine {
+	position: relative;
+	overflow: hidden;
+} 
+
+.dividercontnine-bg {
+	width: 100vw;
+	height: 100px;
+	background-color: #000;
+}
+
+.dividercontnine-bg-inner {
+	width: 100vw;
+	height: 50px;
+	background-color: #fff;
+	border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
+
+@media (min-width: 992px) {
+	.dividercontnine-bg {
+		height: 140px;
+	}
+	.dividercontnine-bg-inner  {
+		height: 70px;
+	}
+}

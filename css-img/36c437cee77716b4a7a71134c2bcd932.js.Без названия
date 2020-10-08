@@ -1,0 +1,17 @@
+document.addEventListener('DOMContentLoaded', function()
+{
+$(document).ready(function(){
+    function reviewthree(){
+    $(".reviewblockthree").slick({
+        dots: false,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 800
+    });
+} reviewthree();
+});
+});

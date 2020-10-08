@@ -1,0 +1,363 @@
+.pricecontfour{
+	position: relative;
+	overflow: hidden;
+}
+
+.priceblockcontfour{
+	overflow: hidden;
+}
+
+.pricelinefour{
+	width: 100%;
+	background-color: #8259ec;
+}
+
+.priceblockallcontfour{
+	overflow: hidden;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.priceblockcontfour{
+	float: left;
+}
+
+.priceblockfour{
+	width: 94%;
+	height: 100%;
+	margin-left: 3%;
+	position: relative;
+	z-index: 0;
+	transition: .2s;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	margin-top: 8px;
+	background-color: #fff;
+}
+
+.priceblockcontfour{
+	transition: .2s;
+}
+
+.priceblockcontfour:hover{
+	margin-top: -8px;
+	padding-bottom: 8px;
+}
+
+.priceblocktopfour{
+	width: 100%;
+}
+
+.priceblocktitlefour{
+	font-family: Roboto;
+  font-size: 32px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+}
+
+.priceblocktextfour{
+	font-family: Roboto;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+.priceblocktopimgfour{
+	object-fit: contain;
+	object-position: center;
+}
+
+.priceblocklinefour{
+	width: 86px;
+	height: 3px;
+	background-color: #8259ec; 
+}
+
+.priceblockbuttonhref{
+	  font-family: Roboto;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  color: #000000;
+  opacity: .7;
+  transition: .1s;
+}
+
+.priceblockbuttonhref:hover,.priceblockbuttonhref:focus{
+	text-decoration: none;
+	color: #000;
+	opacity: 1;
+}
+
+.priceblockbuttonhref:active{
+	text-decoration: none;
+	color: #000;
+	opacity: .7;
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1400px) {
+ 	.pricecontfour{
+ 		padding-bottom: 110px;
+ 	}
+ 	.pricelinefour{
+		height: 212px;
+	}
+	.priceblockallcontfour{
+		margin-top: -210px;
+	}
+	.priceblocktopfour{
+		height: 203px;
+	}
+	.priceblocktopimgfour{
+		width: 100px;
+		height: 100px;
+		margin-top: 95px;
+		margin-left: 43px;
+	}
+	.priceblocktitlefour{
+		padding-top: 20px;
+		padding-bottom: 36px;
+		padding-left: 43px;
+	}
+	.priceblocklinefour{
+		margin-left: 43px;
+		margin-bottom: 43px;
+	}
+	.priceblocktextfour{
+		padding-left: 43px;
+		padding-right: 73px;
+	}
+	.priceblockbuttoncontfour{
+		padding-top: 61px;
+		padding-bottom: 100px;
+		margin-left: 43px;
+	}
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) and (max-width: 1399px) {
+ 	 .pricecontfour{
+ 		padding-bottom: 100px;
+ 	}
+ 	.pricelinefour{
+		height: 153px;
+	}
+	.priceblockallcontfour{
+		margin-top: -150px;
+	}
+	.priceblocktopfour{
+		height: 140px;
+		margin-top: 3px;
+	}
+	.priceblocktopimgfour{
+		width: 60px;
+		height: 60px;
+		margin-top: 65px;
+		margin-left: 20px;
+	}
+	.priceblocktitlefour{
+		padding-top: 20px;
+		padding-bottom: 26px;
+		padding-left: 20px;
+	}
+	.priceblocklinefour{
+		margin-left: 20px;
+		margin-bottom: 23px;
+	}
+	.priceblocktextfour{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.priceblockbuttoncontfour{
+		padding-top: 41px;
+		padding-bottom: 80px;
+		margin-left: 20px;
+	}
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+ 	 .pricecontfour{
+ 		padding-bottom: 90px;
+ 	}
+ 	.pricelinefour{
+		height: 113px;
+	}
+	.priceblockallcontfour{
+		margin-top: -110px;
+	}
+	.priceblocktopfour{
+		height: 100px;
+		margin-top: 3px;
+	}
+	.priceblocktopimgfour{
+		width: 60px;
+		height: 60px;
+		margin-top: 25px;
+		margin-left: 20px;
+	}
+	.priceblocktitlefour{
+		padding-top: 20px;
+		padding-bottom: 26px;
+		padding-left: 20px;
+	}
+	.priceblocklinefour{
+		margin-left: 20px;
+		margin-bottom: 23px;
+	}
+	.priceblocktextfour{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.priceblockbuttoncontfour{
+		padding-top: 41px;
+		padding-bottom: 80px;
+		margin-left: 20px;
+	}
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+ 	 .pricecontfour{
+ 		padding-bottom: 80px;
+ 	}
+ 	.pricelinefour{
+		height: 113px;
+	}
+	.priceblockallcontfour{
+		margin-top: -110px;
+	}
+	.priceblocktopfour{
+		height: 100px;
+		margin-top: 3px;
+	}
+	.priceblocktopimgfour{
+		width: 60px;
+		height: 60px;
+		margin-top: 25px;
+		margin-left: 20px;
+	}
+	.priceblocktitlefour{
+		padding-top: 20px;
+		padding-bottom: 26px;
+		padding-left: 20px;
+	}
+	.priceblocklinefour{
+		margin-left: 20px;
+		margin-bottom: 23px;
+	}
+	.priceblocktextfour{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.priceblockbuttoncontfour{
+		padding-top: 41px;
+		padding-bottom: 80px;
+		margin-left: 20px;
+	}
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+ 	.pricecontfour{
+ 		padding-bottom: 70px;
+ 	}
+ 	.priceblockfour{
+ 		margin-left: 0%;
+ 	}
+ 	.pricelinefour{
+		height: 113px;
+	}
+	.priceblockallcontfour{
+		margin-top: -110px;
+	}
+	.priceblocktopfour{
+		height: 100px;
+		margin-top: 3px;
+	}
+	.priceblocktopimgfour{
+		width: 60px;
+		height: 60px;
+		margin-top: 25px;
+		margin-left: 20px;
+	}
+	.priceblocktitlefour{
+		padding-top: 20px;
+		padding-bottom: 26px;
+		padding-left: 20px;
+	}
+	.priceblocklinefour{
+		margin-left: 20px;
+		margin-bottom: 23px;
+	}
+	.priceblocktextfour{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.priceblockbuttoncontfour{
+		padding-top: 41px;
+		padding-bottom: 80px;
+		margin-left: 20px;
+	}
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+ 	.pricecontfour{
+ 		padding-bottom: 60px;
+ 	}
+ 	.priceblockfour{
+ 		margin-left: 0%;
+ 	}
+ 	.pricelinefour{
+		height: 113px;
+	}
+	.priceblockallcontfour{
+		margin-top: -110px;
+	}
+	.priceblocktopfour{
+		height: 100px;
+		margin-top: 3px;
+	}
+	.priceblocktopimgfour{
+		width: 60px;
+		height: 60px;
+		margin-top: 25px;
+		margin-left: 20px;
+	}
+	.priceblocktitlefour{
+		padding-top: 20px;
+		padding-bottom: 26px;
+		padding-left: 20px;
+	}
+	.priceblocklinefour{
+		margin-left: 20px;
+		margin-bottom: 23px;
+	}
+	.priceblocktextfour{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.priceblockbuttoncontfour{
+		padding-top: 41px;
+		padding-bottom: 80px;
+		margin-left: 20px;
+	}
+}

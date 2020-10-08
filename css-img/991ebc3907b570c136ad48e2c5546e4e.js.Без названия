@@ -1,0 +1,42 @@
+ $(document).ready(function(){
+
+
+    function footercontelevenAccordion() {
+
+    $('.footerconteleven-accordion__hidden').hide();
+    $('.footerconteleven-accordion-item .footerconteleven-accordion__status').text('+');
+
+	$('.footerconteleven-accordion-item').click(function(e) {
+	  	e.preventDefault();
+	  
+	    var $this = $(this);
+
+	     //добавление активного элемента 
+
+	    $('.footerconteleven-accordion-item').removeClass('footerconteleven-accordion-item-active');
+	    $this.toggleClass('footerconteleven-accordion-item-active');
+
+	    // +/-
+
+	    $('.footerconteleven-accordion-item .footerconteleven-accordion__status').text('+');
+	    $('.footerconteleven-accordion-item.footerconteleven-accordion-item-active .footerconteleven-accordion__status').text('-');
+	  
+	    if ($this.next().hasClass('footerconteleven-accordion__hidden-active')) {
+	        $this.next().removeClass('footerconteleven-accordion__hidden-active');
+	        $this.next().slideUp(350);
+	        $this.removeClass('footerconteleven-accordion-item-active');
+	        $('.footerconteleven-accordion-item .footerconteleven-accordion__status').text('+');
+	    } else {
+	        $this.parent().parent().find('.footerconteleven-accordion-item-wrap .footerconteleven-accordion__hidden').removeClass('footerconteleven-accordion__hidden-active');
+	        $this.parent().parent().find('.footerconteleven-accordion-item-wrap .footerconteleven-accordion__hidden').slideUp(350);
+	        $this.next().toggleClass('footerconteleven-accordion__hidden-active');
+	        $this.next().slideToggle(350);
+	    }
+	});
+
+    }
+
+
+    footercontelevenAccordion();
+
+});

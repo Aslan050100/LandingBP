@@ -1,0 +1,34 @@
+$(document).ready(function(){
+
+
+function priceconttenShow() {
+	var stepslider = document.getElementsByClassName('pricecontten-content');
+	stepslider[0].setAttribute("data-wow-duration", "1.5s" );
+
+	var stepitem = document.getElementsByClassName('pricecontten-item');
+	var s = 0.3;
+	for (var i = 0; i <  stepitem.length; i++) {
+		stepitem[i].setAttribute('data-wow-delay', s+"s");
+		s = s+0.2;
+	}
+}
+
+function priceconttenHeight(columns) {
+	if ($(window).width() > 806) {
+	    var tallestcolumn = 0;
+	    columns.each(
+	        function() {
+	            currentHeight = $(this).height();
+	            if (currentHeight > tallestcolumn) {
+	                tallestcolumn = currentHeight;
+	            }
+	        }
+	    );
+    columns.height(tallestcolumn);
+    }
+}
+
+priceconttenShow();
+priceconttenHeight($(".pricecontten-item__features-items-wrap"));
+
+});

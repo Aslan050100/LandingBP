@@ -1,0 +1,5 @@
+/* .body { --color-contrast: #E7512B; } */
+.screentextseven.wow.fadeInRight.g-bg-transparent * { background-color: var(--ui-field-color-danger); }
+#block128892 > section > div > div > div > div.screentextbottomseven { margin-right: 0; justify-content: center; }
+#block128892 > section > div > div > div > div.screentextbottomseven > a { background: #fff;  color: var(--ui-field-color-danger); }
+.dividercontten-bg-inner { background: #f7f7f7; }

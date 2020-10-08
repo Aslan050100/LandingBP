@@ -1,0 +1,10 @@
+document.addEventListener('DOMContentLoaded', function()
+{
+$(document).ready(function(){
+$('.dividertopsecone_img').css('z-index','1');
+function dividertopone(){
+var height = $(".dividertopsecone").css('height');
+$(".dividertopsecone").parent().next().css('margin-top','-'+height);
+} dividertopone();
+});
+});
