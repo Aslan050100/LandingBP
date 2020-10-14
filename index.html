@@ -23,15 +23,15 @@
                 </a> 
                 <!-- /.logo__link -->
                 <nav class="nav menu__nav">
-                    <a href="#" class="nav__item">RPA роботизация</a>
+                    <a href="#about" class="nav__item">RPA роботизация</a>
                     <!-- /.nav__item -->
-                    <a href="#" class="nav__item">Сферы применения RPA</a>
+                    <a href="#application" class="nav__item">Сферы применения RPA</a>
                     <!-- /.nav__item -->
-                    <a href="#" class="nav__item">Преимущества</a>
+                    <a href="#adventage" class="nav__item">Преимущества</a>
                     <!-- /.nav__item -->
-                    <a href="#" class="nav__item">О компании</a>
+                    <a href="#company" class="nav__item">О компании</a>
                     <!-- /.nav__item -->
-                    <a href="#" class="nav__item">Сертификаты</a>
+                    <a href="#record" class="nav__item">Сертификаты</a>
                     <!-- /.nav__item -->
                 </nav>
                 <!-- /.nav menu__nav -->
@@ -61,9 +61,9 @@
                         задачи в своем бизнесе
                     </h1>
                     <!-- /.hero__title -->
-                    <button class="button button--consel">
+                    <a class="button button--consel" href="#consultation">
                         Заказать консультацию по RPA
-                    </button> 
+                    </a> 
                     <!-- /.button button--consel -->
                 </div>
                 <!-- /.hero__content -->
@@ -247,7 +247,7 @@
                     
                             b24form({"id":"59","lang":"ru","sec":"eg1usl","type":"inline"});
                         </script-->
-                        <iframe id="bx_form_iframe_59" name="bx_form_iframe_59" src="https://businessprocess.bitrix24.ru/pub/form.php?view=frame&amp;form_id=59&amp;widget_user_lang=ru&amp;sec=eg1usl&amp;r=1599729537542#%7B%22domain%22%3A%22http%3A%2F%2F127.0.0.1%3A5500%22%2C%22from%22%3A%22http%3A%2F%2F127.0.0.1%3A5500%2F%22%2C%22options%22%3A%7B%7D%7D" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" style="width: 500px; height: 500px; border: 0px; overflow: hidden; padding: 0px; margin: 0px;"></iframe>
+                        <iframe width="100%" id="bx_form_iframe_59" name="bx_form_iframe_59" src="https://businessprocess.bitrix24.ru/pub/form.php?view=frame&amp;form_id=59&amp;widget_user_lang=ru&amp;sec=eg1usl&amp;r=1599729537542#%7B%22domain%22%3A%22http%3A%2F%2F127.0.0.1%3A5500%22%2C%22from%22%3A%22http%3A%2F%2F127.0.0.1%3A5500%2F%22%2C%22options%22%3A%7B%7D%7D" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" style=""></iframe>
                     </div>
                     <!-- /.consultation__content-form -->
                 </div>
@@ -255,7 +255,19 @@
             </div>
         </section>
         <!-- /#consultation.section consultation -->
+        <script>
+            const stepsArrow = (length) => { return `
+                <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="0,100 50,25 50,75 100,0" />
+                    <polyline points="100,100 150,25 150,75 200,0"
+                    fill="none" stroke="black" />
+                </svg>
+            `;}
+            drawArrow = (node) => {
+                document.write(stepsArrow());
+            }
 
+        </script>
         <section class="section steps" id="steps">
             <div class="container">
                 <h3 class="section__title steps__title">
@@ -263,41 +275,79 @@
                 </h3>
                 <!-- /.section__title steps__title -->
                 <div class="steps__content">
-                    <img src="img/line.png" alt="" class="steps__content-img">
-                    <div class="steps__content-img-text-one">
+                    <!-- <img src="img/line.png" alt="" class="steps__content-img"> -->
+                    <div class="steps__content-img-text">
                         <span class="steps__content-text">
-                            Разработка и  согласование ТЗ
-                        </span> 
+                            Разработка и согласование ТЗ
+                        </span>
+                        <!-- <script>drawArrow(this)</script> -->
                         <!-- /.steps__content-text -->
                     </div>
-                    <!-- /.steps__content-img-text-one -->
-                    <div class="steps__content-img-text-two">
+                    <!-- /.steps__content-img-text -->
+                    <div class="steps__content-img-text">
                         <span class="steps__content-text">
                             Настройка RPA-системы <br>
                             согласно ТЗ
                         </span> 
+                        <div class="steps__content-arrow">
+                            
+                        </div>
                         <!-- /.steps__content-text -->
                     </div>
-                    <!-- /.steps__content-img-text-one -->
-                    <div class="steps__content-img-text-three">
+                    <!-- /.steps__content-img-text -->
+                    <div class="steps__content-img-text">
                         <span class="steps__content-text">
                             Демонстрация <br>
                             настроенной системы
                         </span> 
                         <!-- /.steps__content-text -->
                     </div>
-                    <!-- /.steps__content-img-text-one -->
-                    <div class="steps__content-img-text-four">
+                    <!-- /.steps__content-img-text -->
+                    <div class="steps__content-img-text">
                         <span class="steps__content-text">
                             Обучение сотрудников<br>
                             управлению роботами
                         </span> 
                         <!-- /.steps__content-text -->
                     </div>
-                    <!-- /.steps__content-img-text-one -->
+                    <!-- /.steps__content-img-text -->
+                    <div class="steps__arrows" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;">
+                        <script>
+                            const stepsBlockNode = document.querySelector('.steps__content'),
+                                  stepItemNodes = stepsBlockNode.querySelectorAll('.steps__content-img-text');
+
+                            const blockStyle = window.getComputedStyle(stepsBlockNode);
+                            const coords = stepsBlockNode.getBoundingClientRect();
+                            console.dir(coords);
+
+                            const renderArrow = (x1, y1, x2, y2, shift = 20) => { 
+                                const nubmerCenterShift = 30;
+                                const points = [
+                                    {x: nubmerCenterShift + +((x1+'').replace('px', '')), y: nubmerCenterShift + +((y1+'').replace('px', ''))},
+                                    {x: nubmerCenterShift + +((x2+'').replace('px', '')), y: nubmerCenterShift + +((y2+'').replace('px', ''))},
+                                ];
+                                let pointsSVG = '';
+                                for (let point of points) {
+                                    console.log(point);
+                                    pointsSVG += `${point.x},${point.y} `;
+                                }
+                                return `
+                                    <polyline points="${pointsSVG}"
+                                    fill="none" stroke="black" />
+                            `;}
+                            let arrowsSVG = `<svg viewBox="0 0 ${blockStyle.width.replace('px','')} ${blockStyle.height.replace('px','')}" xmlns="http://www.w3.org/2000/svg">`;
+                            for (let i=0; i < stepItemNodes.length-1; i++) {
+                                arrowsSVG += renderArrow(stepItemNodes[i].offsetLeft,stepItemNodes[i].offsetTop,
+                                stepItemNodes[i+1].offsetLeft,stepItemNodes[i+1].offsetTop)
+                            }
+                            arrowsSVG += '</svg>';
+                            document.write(arrowsSVG);
+                        </script>
+                    </div>
                 </div>
                 <!-- /.steps__content -->
             </div>
+
         </section>
         <!-- /#steps.section steps -->
 
@@ -477,7 +527,7 @@
                     </div>
                     <!-- /.footer__content-menu-block -->
                     <div class="footer__content-menu-block">
-                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A43d89bfad2008eef3d00ca65060fd81068de80efc52060a911fe95abbb45d9f8&amp;source=constructor" width="400" height="350" frameborder="0"></iframe>
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A43d89bfad2008eef3d00ca65060fd81068de80efc52060a911fe95abbb45d9f8&amp;source=constructor" width="100%" height="350" frameborder="0"></iframe>
                     </div>
                     <!-- /.footer__content-menu-block -->
                 </div>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>* {margin: 0; padding: 0; box-sizing: border-box;}
+		svg * {
+			/* stroke-width: 2px; stroke: tomato; fill: transparent;  */
+		}
+	</style>
+</head>
+<body style="background: #000;">
+	<div style="height: 100vh; display: flex; align-items: start;justify-content: start;">
+		<div style="
+			width: 1100px; height: 420px; border: 1px solid yellow;
+			background: url(./app-img.png); background-position: center; 
+			background-repeat: no-repeat; background-size: contain;">
+
+			<svg class="stages-svg-desktop" xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" stroke="black">
+				<path d="m0,10 h300" stroke-dasharray="2,2" fill="none"></path>
+				<path d="m300,10 l-10,5 l10,-5 l-10,-5" stroke-width="2" fill="none"></path>
+			</svg>
+
+		</div>
+	</div>
+
+	<div class="steps__arrows"></div>
+	<style>
+		.steps__arrows { position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+  	</style>
+	<script>
+		const stepsBlockNode = document.querySelector('.steps__content'),
+				stepItemNodes = stepsBlockNode.querySelectorAll('.steps__content-img-text'),
+				stepsArrowsBlockNode = stepsBlockNode.querySelector('.steps__arrows');
+
+		const blockStyle = window.getComputedStyle(stepsBlockNode);
+		const stepStyle = window.getComputedStyle(stepItemNodes[0]);
+		console.log('width: ', blockStyle.width);
+		console.log('height: ', blockStyle.height);
+		console.log('top: ', stepStyle.top);
+		console.log('left: ', stepStyle.left);
+
+		const renderArrow = (x1, y1, x2, y2, shift) => { 
+			 const points = [
+				  {x: x1, y: y1},
+				  {x: x2, y: y2},
+			 ];
+			 points.push({x: Math.round(x2/shift), y: Math.round(y2/shift)});
+			 
+			 return `
+			 <svg viewBox="0 0 ${blockStyle.width.replace('px','')} ${blockStyle.height.replace('px','')}" xmlns="http://www.w3.org/2000/svg">
+				  <polyline points="${x1},${y1} ${x2},${y2} ${points[2].x},${points[2].y} 
+										  50,50 80,80"
+				  fill="none" stroke="black" />
+			 </svg>
+		`;}
+
+		stepsArrowsBlockNode.insertAdjacentHTML('beforeend',renderArrow(10,10,100,100,20));
+  </script>
+</body>
+</html>
